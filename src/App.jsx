@@ -6,11 +6,13 @@ function App() {
   return (
     <Router>
       <Header />
+      <div style={{ paddingTop: "56px" }}>
       <Routes>
         <Route path="/" element={<div>Home</div>} />
         <Route path="/quiz" element={<div>Quiz Page</div>} />
         <Route path="/favorites" element={<div>Favorites Page</div>} />
       </Routes>
+      </div>
     </Router>
   );
 }
