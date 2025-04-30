@@ -4,7 +4,7 @@ import "./destinations.css";
 
 function Destinations() {
     const [filter, setFilter] = useState("All");
-    const [searchTerm, setSearchTerm] = useState(""); // ✅ NEW
+    const [searchTerm, setSearchTerm] = useState(""); 
   
     const filteredDestinations = destinations
       .filter((dest) =>
