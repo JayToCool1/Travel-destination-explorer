@@ -1,0 +1,32 @@
+.quiz-page {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.quiz-page h1 {
+    color: #1a73e8;
+    margin-bottom: 30px;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.quiz-options button {
+    background-color: #f5faff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.quiz-options button:hover {
+    background-color: #1a73e8;
+    color: white;
+    border-color: #1a73e8;
+}
