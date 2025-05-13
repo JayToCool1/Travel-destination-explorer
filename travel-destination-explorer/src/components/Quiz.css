@@ -1,19 +1,31 @@
 .quiz-page {
     padding: 40px 20px;
     text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .quiz-page h1 {
     color: #1a73e8;
+    font-size: 2.2rem;
     margin-bottom: 30px;
+}
+
+.quiz-page h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px; 
 }
 
 .quiz-options {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 100%;
     max-width: 300px;
-    margin: 0 auto;
 }
 
 .quiz-options button {
@@ -30,3 +42,41 @@
     color: white;
     border-color: #1a73e8;
 }
+
+.result-card {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .destination-result {
+    margin-top: 16px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #cc3b56;
+    color: white;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .destination-result img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 16px;
+  }
+  
+  .destination-result h3 {
+    margin: 0;
+    color: #f5faff;
+    font-size: 1.4rem;
+  }
+  
+  .destination-result p {
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  .destination-result button:hover {
+    background-color: #cc3b56;
+  }
