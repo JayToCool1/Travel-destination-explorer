@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import destinations from "../data/destinations";
 import "./Quiz.css";
 
 function Quiz() {
@@ -21,6 +20,33 @@ function Quiz() {
         }
     ];
 
+    const destinations = [
+      {
+        name: "Tokyo, Japan",
+        category: "Food",
+        image: "/tokyo.jpg",
+        description: "Explore sushi, ramen, and vibrant food culture."
+      },
+      {
+        name: "Banff, Canada",
+        category: "Nature",
+        image: "/banff.jpg",
+        description: "Stunning mountain views, lakes, and hiking."
+      },
+      {
+        name: "Rome, Italy",
+        category: "History",
+        image: "/rome.jpg",
+        description: "Ancient ruins, rich culture, and architecture."
+      },
+      {
+        name: "Las Vegas, USA",
+        category: "Fun",
+        image: "/lasvegas.jpg",
+        description: "Casinos, nightlife, and shows all night long."
+      }
+    ];
+
     const handleAnswer = (option) => {
       const updated = [...answers, option];
       setAnswers(updated);
@@ -29,12 +55,28 @@ function Quiz() {
     };
 
     const getResult = () => {
-      const mainCategory = answers.find((a) => 
-         ["Food", "Nature", "History", "Fun"].includes(a)
+      const mainCategory = answers.find((a) =>
+        ["Food", "Nature", "History", "Fun"].includes(a)
       );
-      const suggestion = destinations.find((d) => d.category === mainCategory);
-      return suggestion
+      return destinations.find((d) => d.category === mainCategory);
     };
+    
+    const handleSaveToFavorites = (destination) => {
+      const existingFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    
+      const alreadySaved = existingFavorites.some(
+        (fav) => fav.name === destination.name
+      );
+    
+      if (!alreadySaved) {
+        const updatedFavorites = [...existingFavorites, destination];
+        localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+        alert(`${destination.name} has been added to your favorites!`);
+      } else {
+        alert(`${destination.name} is already in your favorites.`);
+      }
+    };
+    
 
     return (
       <div className="quiz-page">
@@ -42,7 +84,18 @@ function Quiz() {
         {step === "done" ? (
           <div>
             <h2>Your Match:</h2>
-            <p>{getResult()?.name || "Try again!"}</p>
+            {getResult() ? (
+            <div className="destination-result">
+           <img src={getResult().image} alt={getResult().name} />
+           <h3>{getResult().name}</h3>
+           <p>{getResult().description}</p>
+           <button onClick={() => handleSaveToFavorites(getResult())}>
+           ❤️ Save to Favorites
+          </button>
+         </div>
+        ) : (
+          <p>No match found. Try again!</p>
+        )}      
           </div>
         ) : (
           <div>
