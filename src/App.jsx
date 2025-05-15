@@ -1,18 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./pages/Home"
+import Home from "./pages/Home";
 
 function App() {
   return (
-     <Router>
+    <Router>
       <Header />
-      <div style={{ padding: "56px" }}>
+      <div style={{ paddingTop: "56px" }}>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
-       </div> 
-     </Router>
+      </div>
+    </Router>
   );
 }
 
