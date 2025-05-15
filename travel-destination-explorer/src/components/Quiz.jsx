@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Quiz.css";
+import destinations from "../data/destinations";
 
 function Quiz() {
     const [step, setStep] = useState(0);
@@ -20,33 +21,7 @@ function Quiz() {
         }
     ];
 
-    const destinations = [
-      {
-        name: "Tokyo, Japan",
-        category: "Food",
-        image: "/tokyo.jpg",
-        description: "Explore sushi, ramen, and vibrant food culture."
-      },
-      {
-        name: "Banff, Canada",
-        category: "Nature",
-        image: "/banff.jpg",
-        description: "Stunning mountain views, lakes, and hiking."
-      },
-      {
-        name: "Rome, Italy",
-        category: "History",
-        image: "/rome.jpg",
-        description: "Ancient ruins, rich culture, and architecture."
-      },
-      {
-        name: "Las Vegas, USA",
-        category: "Fun",
-        image: "/lasvegas.jpg",
-        description: "Casinos, nightlife, and shows all night long."
-      }
-    ];
-
+    
     const handleAnswer = (option) => {
       const updated = [...answers, option];
       setAnswers(updated);
