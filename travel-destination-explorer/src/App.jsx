@@ -4,11 +4,11 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-     <Router>
+    <Router>
       <div style={{ paddingTop: "56px" }}>
         <Home />
       </div>
-     </Router>
+    </Router>
   );
 }
 
