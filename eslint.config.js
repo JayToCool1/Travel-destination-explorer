@@ -30,4 +30,8 @@ export default [
       ],
     },
   },
+ feature/favorites
 ]
+
+]
+ main

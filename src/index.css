@@ -1,3 +1,4 @@
+feature/favorites
 :root {
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -66,3 +67,30 @@
       background-color: #f9f9f9;
     }
   }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html,
+#root {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f5faff;
+}
+ main
