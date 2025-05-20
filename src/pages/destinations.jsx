@@ -7,6 +7,7 @@ function Destinations() {
   const [filter, setFilter] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
 
+  
   const filteredDestinations = destinations
     .filter((dest) => filter === "All" || dest.category === filter)
     .filter((dest) =>
