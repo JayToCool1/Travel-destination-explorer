@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import destinations from "../data/destinations";
-import CategoryFilter from "../components/CategoryFilter";
+import Category from "../components/CategoryFilter";
 import "./destinations.css";
 
 function Destinations() {
