@@ -39,6 +39,8 @@ function Destinations() {
             {cat}
           </button>
         ))}
+        <Category currentFilter={filter} setFilter={setFilter} />
+
       </div>
 
   <div className="destinations-grid">
