@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
 import Destinations from "./pages/Destinations";
-import Quiz from "./pages/Quiz";
+import Quiz from "./components/Quiz";
 
 function App() {
   return (
