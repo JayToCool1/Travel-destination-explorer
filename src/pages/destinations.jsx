@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import destinations from "../data/destinations";
+import CategoryFilter from "../components/CategoryFilter";
 import "./destinations.css";
 
 function Destinations() {
@@ -7,9 +8,7 @@ function Destinations() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredDestinations = destinations
-    .filter((dest) =>
-      filter === "All" ? true : dest.category === filter
-    )
+    .filter((dest) => filter === "All" || dest.category === filter)
     .filter((dest) =>
       dest.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       dest.description.toLowerCase().includes(searchTerm.toLowerCase())
