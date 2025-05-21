@@ -10,16 +10,15 @@ function App() {
   return (
     <Router>
       <Header />
-      <div style={{ paddingTop: "56px" }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/favorites" element={<Favorites />} />
-          <Route path="/destinations" element={<Destinations />} />
-          <Route path="/quiz" element={<Quiz />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/destinations" element={<Destinations />} />
+      </Routes>
     </Router>
   );
 }
+
 
 export default App;
