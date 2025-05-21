@@ -60,29 +60,29 @@ function Quiz() {
           <div>
             <h2>Your Match:</h2>
             {getResult() ? (
-            <div className="destination-result">
-           <img src={getResult().image} alt={getResult().name} />
-           <h3>{getResult().name}</h3>
-           <p>{getResult().description}</p>
-           <button onClick={() => handleSaveToFavorites(getResult())}>
-           ❤️ Save to Favorites
-          </button>
-         </div>
+            <div className="result-card">
+            <img src={getResult().image} alt={getResult().name} />
+            <h3>{getResult().name}</h3>
+            <p>{getResult().description}</p>
+            <button onClick={() => handleSaveToFavorites(getResult())}>
+              ❤️ Save to Favorites
+            </button>
+          </div>          
         ) : (
           <p>No match found. Try again!</p>
         )}      
           </div>
         ) : (
-          <div>
-            <h2>{questions[step].question}</h2>
-            <div className="quiz-options">
-              {questions[step].options.map((option) => (
-                <button key={option} onClick={() => handleAnswer(option)}>
-                  {option}
-                </button>
-              ))}
-            </div>
-          </div>
+    <div className="quiz-box">
+      <h2>{questions[step].question}</h2>
+         <div className="quiz-options">
+           {questions[step].options.map((option) => (
+             <button key={option} onClick={() => handleAnswer(option)}>
+            {option}
+           </button>
+          ))}
+         </div>
+       </div>
         )}
       </div>
     );
