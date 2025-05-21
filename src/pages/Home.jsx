@@ -12,6 +12,7 @@ function Home() {
         Your browser does not support the video tag.
       </video>
 
+
       <div className="hero-overlay">
         <h1>Find Your Next Adventure</h1>
         <p>Explore food, nature, and culture around the world.</p>
