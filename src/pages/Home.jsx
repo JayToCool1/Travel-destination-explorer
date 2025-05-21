@@ -15,10 +15,22 @@ function Home() {
       <div className="hero-overlay">
         <h1>Find Your Next Adventure</h1>
         <p>Explore food, nature, and culture around the world.</p>
+
         <button onClick={() => navigate("/quiz")}>Start Quiz</button>
+
+        <section className="categories">
+          <h2>Choose Your Interest</h2>
+          <div className="category-buttons">
+            <button>🍽️ Food</button>
+            <button>🌲 Nature</button>
+            <button>🎉 Fun</button>
+            <button>🏛️ History</button>
+          </div>
+        </section>
       </div>
     </div>
   );
 }
 
 export default Home;
+
