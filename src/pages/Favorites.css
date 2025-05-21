@@ -1,18 +1,22 @@
-.favorites-page {
+ .page-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background-color: #f7f9fc; /* optional background */
+}
+
+
+ .favorites-page {
   max-width: 700px;
   width: 100%;
   text-align: center;
 }
 
-.page-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 40px 20px;
-}
 
-  
   .favorites-page h1 {
     color: #1a73e8;
     margin-bottom: 20px;
