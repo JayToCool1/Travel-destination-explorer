@@ -1,82 +1,104 @@
 .quiz-page {
-    padding: 40px 20px;
-    text-align: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f9fc;
 }
 
 .quiz-page h1 {
-    color: #1a73e8;
-    font-size: 2.2rem;
-    margin-bottom: 30px;
+  color: #1a73e8;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
 }
 
 .quiz-page h2 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 20px; 
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px; 
 }
 
+/* 💬 Quiz Question Box */
+.quiz-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+/* 🧠 Options */
 .quiz-options {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-    max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 .quiz-options button {
-    background-color: #f5faff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 12px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+  background-color: #f5faff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
 .quiz-options button:hover {
-    background-color: #1a73e8;
-    color: white;
-    border-color: #1a73e8;
+  background-color: #1a73e8;
+  color: white;
+  border-color: #1a73e8;
 }
 
+/* ✅ Result Card */
 .result-card {
-    text-align: center;
-    margin-top: 40px;
-  }
-  
-  .destination-result {
-    margin-top: 16px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #cc3b56;
-    color: white;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .destination-result img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 16px;
-  }
-  
-  .destination-result h3 {
-    margin: 0;
-    color: #f5faff;
-    font-size: 1.4rem;
-  }
-  
-  .destination-result p {
-    font-size: 0.95rem;
-    color: #444;
-  }
-  
-  .destination-result button:hover {
-    background-color: #cc3b56;
-  }
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.result-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.result-card h3 {
+  margin: 10px 0 8px;
+  font-size: 1.5rem;
+  color: #1a73e8;
+}
+
+.result-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* ❤️ Save Button */
+.result-card button {
+  background-color: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.result-card button:hover {
+  background-color: #cc3b56;
+}
