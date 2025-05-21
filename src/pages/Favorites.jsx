@@ -11,7 +11,7 @@ function Favorites() {
      }, []);
 
      return (
-      <div className="favorites-page">
+      <div className="page-wrapper">
         <div className="favorites-wrapper">
           <h1>❤️ Your Saved Destinations</h1>
   
