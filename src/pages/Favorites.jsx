@@ -11,9 +11,10 @@ function Favorites() {
      }, []);
 
      return (
-        <div className="favorites-page">
+      <div className="favorites-page">
+        <div className="favorites-wrapper">
           <h1>❤️ Your Saved Destinations</h1>
-    
+  
           {favorites.length === 0 ? (
             <p>You haven't saved anything yet.</p>
           ) : (
@@ -28,7 +29,9 @@ function Favorites() {
             </div>
           )}
         </div>
-      );
-    }
-
-    export default Favorites;
+      </div>
+    );
+  }
+  
+  export default Favorites;
+  
