@@ -54,39 +54,42 @@ function Quiz() {
     
 
     return (
-      <div className="quiz-page">
-        <h1>Find Your Ideal Destination</h1>
-        {step === "done" ? (
-          <div>
-            <h2>Your Match:</h2>
-            {getResult() ? (
-            <div className="result-card">
-            <img src={getResult().image} alt={getResult().name} />
-            <h3>{getResult().name}</h3>
-            <p>{getResult().description}</p>
-            <button onClick={() => handleSaveToFavorites(getResult())}>
-              ❤️ Save to Favorites
-            </button>
-          </div>          
-        ) : (
-          <p>No match found. Try again!</p>
-        )}      
-          </div>
-        ) : (
-    <div className="quiz-box">
-      <h2>{questions[step].question}</h2>
-         <div className="quiz-options">
-           {questions[step].options.map((option) => (
-             <button key={option} onClick={() => handleAnswer(option)}>
-            {option}
-           </button>
-          ))}
-         </div>
-       </div>
-        )}
+      <div className="page-wrapper">
+        <div className="quiz-page">
+          <h1>Find Your Ideal Destination</h1>
+          {step === "done" ? (
+            <div>
+              <h2>Your Match:</h2>
+              {getResult() ? (
+                <div className="result-card">
+                  <img src={getResult().image} alt={getResult().name} />
+                  <h3>{getResult().name}</h3>
+                  <p>{getResult().description}</p>
+                  <button onClick={() => handleSaveToFavorites(getResult())}>
+                    ❤️ Save to Favorites
+                  </button>
+                </div>
+              ) : (
+                <p>No match found. Try again!</p>
+              )}
+            </div>
+          ) : (
+            <div className="quiz-box">
+              <h2>{questions[step].question}</h2>
+              <div className="quiz-options">
+                {questions[step].options.map((option) => (
+                  <button key={option} onClick={() => handleAnswer(option)}>
+                    {option}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     );
   }
+  
   
   export default Quiz;
   
