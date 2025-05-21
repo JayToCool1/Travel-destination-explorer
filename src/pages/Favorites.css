@@ -9,6 +9,10 @@
   background-color: #f7f9fc; /* optional background */
 }
 
+.page-wrapper {
+  background: linear-gradient(135deg, #dbeafe, #f0f9ff);
+}
+
 
  .favorites-page {
   max-width: 700px;
