@@ -83,22 +83,24 @@
 
 .category-buttons {
   display: flex;
-  gap: 16px;
+  gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 24px;
 }
 
 .category-buttons button {
   background: rgba(255, 255, 255, 0.2);
   color: white;
-  padding: 10px 20px;
-  border: 1px solid #ffffff55;
-  border-radius: 12px;
-  font-size: 1rem;
-  cursor: pointer;
-  backdrop-filter: blur(6px);
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  border: 1px solid #ffffff66;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
+
 
 .category-buttons button:hover {
   background-color: rgba(255, 255, 255, 0.35);
