@@ -21,11 +21,11 @@ function Home() {
         <section className="categories">
           <h2>Choose Your Interest</h2>
           <div className="category-buttons">
-            <button>🍽️ Food</button>
-            <button>🌲 Nature</button>
-            <button>🎉 Fun</button>
-            <button>🏛️ History</button>
-          </div>
+            <button onClick={() => navigate("/destinations?category=Food")}>🍽️ Food</button>
+            <button onClick={() => navigate("/destinations?category=Nature")}>🌲 Nature</button>
+            <button onClick={() => navigate("/destinations?category=Fun")}>🎉 Fun</button>
+            <button onClick={() => navigate("/destinations?category=History")}>🏛️ History</button>
+         </div>
         </section>
       </div>
     </div>
