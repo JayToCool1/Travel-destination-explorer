@@ -68,6 +68,13 @@ function Quiz() {
                   <button onClick={() => handleSaveToFavorites(getResult())}>
                     ❤️ Save to Favorites
                   </button>
+                  <button className="retake-btn" onClick={() => {
+                    setStep(0);
+                    setAnswers([]);
+                }}>
+                    🔁 Retake Quiz
+                  </button>
+
                 </div>
               ) : (
                 <p>No match found. Try again!</p>
