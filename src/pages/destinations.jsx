@@ -1,13 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import destinations from "../data/destinations";
 import Category from "../components/CategoryFilter";
 import "./destinations.css";
+import { useLocation } from "react-router-dom";
 
 function Destinations() {
-  const [filter, setFilter] = useState("All");
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const categoryFromURL = queryParams.get("category");
+
+  const [filter, setFilter] = useState(categoryFromURL || "All");
   const [searchTerm, setSearchTerm] = useState("");
 
-  
+  useEffect(() => {
+    if (categoryFromURL) {
+      setFilter(categoryFromURL);
+    }
+  }, [categoryFromURL]);
+
   const filteredDestinations = destinations
     .filter((dest) => filter === "All" || dest.category === filter)
     .filter((dest) =>
@@ -40,25 +50,22 @@ function Destinations() {
           </button>
         ))}
         <Category currentFilter={filter} setFilter={setFilter} />
-
       </div>
 
-  <div className="destinations-grid">
-   {filteredDestinations.map((destination, index) => (
-    <div key={index} className="destination-card">
-      <img src={destination.image} alt={destination.name} />
-      
-      <div className="destination-content">
-        <div className="destination-text">
-          <h3>{destination.name}</h3>
-          <p>{destination.description}</p>
-        </div>
-        
-        <button className="see-more-button">See More</button>
+      <div className="destinations-grid">
+        {filteredDestinations.map((destination, index) => (
+          <div key={index} className="destination-card">
+            <img src={destination.image} alt={destination.name} />
+            <div className="destination-content">
+              <div className="destination-text">
+                <h3>{destination.name}</h3>
+                <p>{destination.description}</p>
+              </div>
+              <button className="see-more-button">See More</button>
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
     </div>
   );
 }
