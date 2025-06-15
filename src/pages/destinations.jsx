@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import destinations from "../data/destinations";
-import Category from "../components/CategoryFilter";
 import "./destinations.css";
 import { useLocation } from "react-router-dom";
 
@@ -38,9 +37,9 @@ function Destinations() {
         onChange={(e) => setSearchTerm(e.target.value)}
       />
 
-      {/* Category Filters */}
+      {/* Single Row of Category Filters */}
       <div className="filters">
-        {["Food", "Nature", "Fun", "History"].map((cat) => (
+        {["All", "Food", "Nature", "Fun", "History"].map((cat) => (
           <button
             key={cat}
             onClick={() => setFilter(cat)}
@@ -49,9 +48,9 @@ function Destinations() {
             {cat}
           </button>
         ))}
-        <Category currentFilter={filter} setFilter={setFilter} />
       </div>
 
+      {/* Destination Cards */}
       <div className="destinations-grid">
         {filteredDestinations.map((destination, index) => (
           <div key={index} className="destination-card">
